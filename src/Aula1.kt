@@ -71,6 +71,8 @@ fun main() {
 //    println(nome)
     println(questao3(5))
     questao4()
+
+    navegarNoArray(mutableListOf("cachorro", "gato", "peixe"))
 }
 
 fun questao3(numero: Int): Boolean {
@@ -95,10 +97,16 @@ fun meuNome() {
     println("Cesar Rodrigues")
 }
 
-fun meuNomeCompleto(nome: String, sobrenome: String) {
+fun meuNomeCompleto(nome: String, sobrenome: String): Unit {
     println("$nome $sobrenome")
 }
 
 fun meuNomeCompletoComRetorno(nome: String, sobrenome: String): String {
     return "$nome $sobrenome"
+}
+
+fun navegarNoArray(xpto: List<String>) {
+    xpto.forEach {
+        println(it)
+    }
 }

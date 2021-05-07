@@ -1,14 +1,20 @@
 fun main() {
-    val fred = Animal(nome = "Fred", tipo = "Cachorro")
+    val fred = Animal()
+    val fredPreenchido = Animal(tipo = "Cachorro")
     val bichano = Animal(nome = "Bichano", tipo = "gato", reino = "mamífero")
     val perebas = Animal(nome = "Perebas", tipo = "rato", tamanho = 15)
+
+    fred.nome = "Fred"
+    fred.tipo = "gato"
+
+    println("O nome é ${fred.nome} e meu tipo é ${fred.tipo}")
     fred.comer()
     fred.sobre()
 }
 
 class Animal(
-    val nome: String,
-    val tipo: String
+    var nome: String = "Sem nome",
+    var tipo: String = "Sem tipo"
 ) {
 
     var reino = ""
