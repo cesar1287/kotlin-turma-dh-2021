@@ -25,7 +25,8 @@ fun main() {
                 val inferior = CamaroteInferior(100.0, 2)
                 println(
                     "Tudo OK, o valor do ingresso no " +
-                            "camarote inferior é ${inferior.valorIngresso()} reais"
+                            "camarote inferior é ${inferior.valorIngresso()} reais " +
+                            "e a localização está no assento ${inferior.localizacao}"
                 )
             }
         }
