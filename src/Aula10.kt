@@ -20,6 +20,10 @@ class Ferrari: Automovel() {
 
     override var nome: String = "hsdds"
 
+    var motor = "530cv"
+
+    val cor = "vermelho"
+
     override fun acelerar() {
         println("Uma ferrari acelerando")
     }
@@ -38,9 +42,21 @@ class Ferrari: Automovel() {
             is Ferrari -> {
                 this.nome == outraFerrari?.nome
             }
+            is Double -> {
+                true
+            }
             else -> {
                 super.equals(other)
             }
         }
+    }
+
+    override fun toString(): String {
+        return "O meu nome é $nome, eu tenho $motor cavalos de potência e " +
+                "minha cor é $cor"
+    }
+
+    override fun hashCode(): Int {
+        return super.hashCode()
     }
 }

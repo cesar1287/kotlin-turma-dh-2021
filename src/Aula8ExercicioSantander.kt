@@ -45,6 +45,10 @@ class ContaPoupanca(
         saldo += juros
         println("Meu novo saldo é $saldo")
     }
+
+    override fun toString(): String {
+        return "A taxa de juros da minha poupança é $taxaJuros"
+    }
 }
 
 class ContaCorrente(
