@@ -81,6 +81,15 @@ class ContaCorrente(
                 " taxa de operação é $taxaDeOperacao"
         )
     }
+
+    override fun equals(other: Any?): Boolean {
+        return when(other) {
+            is ContaCorrente -> {
+                this.numeroConta == other.numeroConta
+            }
+            else -> super.equals(other)
+        }
+    }
 }
 
 class ContaPoupanca(
